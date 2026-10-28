@@ -1,0 +1,105 @@
+/* ---------- Variables de color ---------- */
+:root {
+  --fondo: #1e1f26;
+  --cuerpo: #2a2c36;
+  --tecla: #3a3d4a;
+  --tecla-hover: #4a4e5e;
+  --funcion: #5b5f73;
+  --operador: #f08a24;
+  --operador-hover: #f5a04d;
+  --texto: #f4f4f6;
+  --texto-suave: #a0a3b1;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: var(--fondo);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color: var(--texto);
+  padding: 16px;
+}
+
+.calculadora {
+  width: 100%;
+  max-width: 340px;
+  background: var(--cuerpo);
+  border-radius: 24px;
+  padding: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* ---------- Pantalla ---------- */
+.pantalla {
+  text-align: right;
+  padding: 16px 8px 20px;
+  min-height: 110px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+}
+
+.operacion {
+  color: var(--texto-suave);
+  font-size: 1rem;
+  min-height: 1.4em;
+  word-break: break-all;
+}
+
+.resultado {
+  font-size: 2.6rem;
+  font-weight: 300;
+  word-break: break-all;
+}
+
+/* ---------- Teclado ---------- */
+.teclado {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.tecla {
+  aspect-ratio: 1;
+  border: none;
+  border-radius: 50%;
+  background: var(--tecla);
+  color: var(--texto);
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.05s;
+}
+
+.tecla:hover { background: var(--tecla-hover); }
+.tecla:active { transform: scale(0.95); }
+
+.tecla.funcion { background: var(--funcion); }
+
+.tecla.operador,
+.tecla.igual { background: var(--operador); }
+
+.tecla.operador:hover,
+.tecla.igual:hover { background: var(--operador-hover); }
+
+/* Operador seleccionado: se resalta hasta escribir el siguiente número */
+.tecla.operador.activo {
+  background: var(--texto);
+  color: var(--operador);
+}
+
+/* El cero ocupa dos columnas */
+.tecla.cero {
+  grid-column: span 2;
+  aspect-ratio: auto;
+  border-radius: 40px;
+  text-align: left;
+  padding-left: 28px;
+}
