@@ -2,6 +2,8 @@
 
 Calculadora web sencilla hecha con **HTML, CSS y JavaScript**, sin librerías ni frameworks.
 
+🔗 **Demo en vivo:** https://diegorivera14.github.io/calculadora/
+
 ## Funcionalidades
 
 - Suma, resta, multiplicación y división.
@@ -25,7 +27,7 @@ Calculadora web sencilla hecha con **HTML, CSS y JavaScript**, sin librerías ni
 
 ## Cómo usarla
 
-No necesita instalación. Descarga el repositorio y abre `index.html` en el navegador.
+Puedes probarlo directamente en la [demo](https://diegorivera14.github.io/calculadora/), o descargar el repositorio y abrir `index.html` en el navegador (no necesita instalación).
 
 ```bash
 git clone https://github.com/DiegoRivera14/calculadora.git
